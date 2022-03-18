@@ -1,0 +1,58 @@
+APP STRUCTURE
+1 SplashScreen
+2 TopNavBar
+    A Icon to open the "SideMenu"
+    App Name: Upcoming Events
+    B Icon to open the "SortMenu"
+        - Show Expired
+        - Show Upcoming
+        - Sort Events
+            - By Title (A-Z)
+            - By Title (Z-A)
+            - By Date (ascending)
+            - By Date (descending)
+3 EventsScreen
+    A List of all active events:
+        - EventCard  (thumbnail image, event name, countdown)
+    B "Button" to add a new event
+4 AddEventScreen
+    A image, name, date, time, location, description, cancel button, save button
+5 EditEventScreen
+    A image, name, date, time, location, description, cancel button, save button
+6 ViewEventScreen
+    A image, name, date, time, location, description, countdown, edit button, delete button
+7 ConfirmDeleteCard (cancel button, delete button) - use phone Alert API
+8 ArchivedEventsScreen
+    A List of all expired events:
+        - "ExpiredEventCard"  (thumbnail image, event name, date, time)
+    B Button to go back to EventsScreen
+9 SettingsScreen
+    A General
+        - Theme
+            - Dark Mode
+            - Light Mode
+        - Date Format
+        - Time Format
+        - First Day of the Week
+        - Update widget in the background
+        - Click on widget to open app
+        - Display widget in the status bar
+        - Disable Analytics
+    B About
+        - Build Version
+        - Send Feedback
+        - Rate and Review App on Google Play
+        - Privacy Policy
+        - Terms of Service
+        - Open Source Licenses
+10 SideMenu - use drawer
+    A Add new event - AddOrEditEventScreen
+    B View all events - EventsScreen
+    C Settings - SettingsScreen
+    D Credits
+
+<div>UI Designs made by <a href="https://uixlibrary.com/profile/cristian-dragos" title="Cristian Dragos">Cristian Dragos</a> from <a href="https://uixlibrary.com/" title=“UIXLibrary”>uixlibrary.com</a></div>
+
+https://dribbble.com/shots/15539556-Campus-Cards-Elements/attachments/7320418?mode=media
+
+https://github.com/Dennitz/Timetable
