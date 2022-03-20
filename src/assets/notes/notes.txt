@@ -59,3 +59,23 @@ https://github.com/Dennitz/Timetable
 
 {/* <Text>param1: {JSON.stringify(param1)}</Text> */}
           {/* <Text>param2: {JSON.stringify(param2)}</Text> */}
+
+<NavigationContainer>
+        <Drawer.Navigator initialRouteName="AddEvent">
+          <Drawer.Screen
+            name="AddEvent"
+            component={AddEvent}
+            options={{ title: "Add Event" }}
+          />
+          <Drawer.Screen
+            name="ArchivedEvents"
+            component={ArchivedEvents}
+            options={{ title: "Archived Events" }}
+          />
+          <Drawer.Screen
+            name="Settings"
+            component={Settings}
+            options={{ title: "Settings" }}
+          />
+        </Drawer.Navigator>
+      </NavigationContainer>

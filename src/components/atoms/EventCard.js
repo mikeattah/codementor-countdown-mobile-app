@@ -8,13 +8,13 @@ import {
   View,
 } from "react-native";
 
-function EventCard({ ...props }) {
+function EventCard({ navigation, ...props }) {
   return (
     <SafeAreaView>
       <TouchableHighlight
         onPress={() => {
           console.log("Navigate to ViewEventScreen");
-          props.navigation.navigate("ViewEventScreen");
+          navigation.navigate("ViewEventScreen");
         }}
       >
         <View style={styles.eventCard}>

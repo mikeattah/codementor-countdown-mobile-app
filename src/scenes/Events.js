@@ -14,7 +14,7 @@ import data from "../assets/data.json";
 
 const Separator = () => <View style={styles.separator} />;
 
-function EventsScreen({ navigation }) {
+function Events({ navigation }) {
   return (
     <SafeAreaView>
       <View style={styles.container}>
@@ -55,9 +55,11 @@ function EventsScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    flexDirection: "column",
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "flex-start",
+    backgroundColor: "#fff",
+    padding: 5,
   },
   eventsContainer: {},
   buttonContainer: {
@@ -72,4 +74,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default EventsScreen;
+export default Events;

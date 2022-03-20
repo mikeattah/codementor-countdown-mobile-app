@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import {
+  Button,
   SafeAreaView,
   StyleSheet,
   Text,
+  TextInput,
   View,
   Image,
   TouchableOpacity,
@@ -10,7 +12,7 @@ import {
 
 const saveEvent = () => {};
 
-function AddEventScreen({ route, navigation }) {
+function AddEvent({ route, navigation }) {
   // const { param1, param2 } = route.params;
 
   const [eventName, setEventName] = useState("Enter Event Name");
@@ -29,7 +31,7 @@ function AddEventScreen({ route, navigation }) {
           <View>
             <Image
               style={styles.eventImage}
-              source={require("@expo/snack-static/react-native-logo.png")}
+              source={{ uri: "https://via.placeholder.com/120.png" }}
             />
           </View>
           <View>
@@ -134,4 +136,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AddEventScreen;
+export default AddEvent;

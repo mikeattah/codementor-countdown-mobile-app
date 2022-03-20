@@ -1,14 +1,7 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-
-function EditEventScreen(
-  {
-    /* navigation */
-  }
-) {
+function EditEvent({ navigation }) {
   return (
     <SafeAreaView>
       <View style={styles.container}>
@@ -29,4 +22,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default EditEventScreen;
+export default EditEvent;

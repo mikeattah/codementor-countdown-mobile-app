@@ -1,18 +1,11 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-
-function ViewEventScreen(
-  {
-    /* navigation */
-  }
-) {
+function Settings({ navigation }) {
   return (
     <SafeAreaView>
       <View style={styles.container}>
-        <Text>View Event Screen</Text>
+        <Text>Settings Screen</Text>
       </View>
     </SafeAreaView>
   );
@@ -29,4 +22,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ViewEventScreen;
+export default Settings;

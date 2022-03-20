@@ -4,7 +4,7 @@ import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 import ArchivedEventCard from "../components/atoms/ArchivedEventCard";
 import data from "../assets/data.json";
 
-function ArchivedEventsScreen() {
+function ArchivedEvents({ navigation }) {
   return (
     <SafeAreaView>
       <View style={styles.container}>
@@ -37,4 +37,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ArchivedEventsScreen;
+export default ArchivedEvents;
