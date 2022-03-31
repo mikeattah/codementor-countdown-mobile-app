@@ -5,7 +5,17 @@ function ViewEvent({ navigation }) {
   return (
     <SafeAreaView>
       <View style={styles.container}>
-        <Text>View Event Screen</Text>
+        <EventDetails
+          title="Event Details"
+          source={eventImage}
+          name={eventName}
+          date={eventDate}
+          time={eventTime}
+          location={eventLocation}
+          description={eventDescription}
+          leftButton="Delete"
+          rightButton="Edit"
+        />
       </View>
     </SafeAreaView>
   );

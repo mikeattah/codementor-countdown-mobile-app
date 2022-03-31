@@ -1,11 +1,35 @@
-import React from "react";
-import { SafeAreaView, StyleSheet, Text, View } from "react-native";
+import React, { useState } from "react";
+import { SafeAreaView, StyleSheet, View, TouchableOpacity } from "react-native";
+import EventDetails from "./components/organisms/EventDetails.js";
 
-function EditEvent({ navigation }) {
+const saveEvent = () => {};
+
+function EditEvent({ route, navigation }) {
+  // const { param1, param2 } = route.params;
+
+  const [eventImage, setEventImage] = useState("");
+  const [eventName, setEventName] = useState("Enter Event Name");
+  const [eventDate, setEventDate] = useState("Enter Event Date");
+  const [eventTime, setEventTime] = useState("Enter Event Time");
+  const [eventLocation, setEventLocation] = useState("Enter Event Location");
+  const [eventDescription, setEventDescription] = useState(
+    "Enter Event Description"
+  );
+
   return (
     <SafeAreaView>
       <View style={styles.container}>
-        <Text>Edit Event Screen</Text>
+        <EventDetails
+          title="Edit Event Details"
+          source={eventImage}
+          name={eventName}
+          date={eventDate}
+          time={eventTime}
+          location={eventLocation}
+          description={eventDescription}
+          leftButton="Cancel"
+          rightButton="Save"
+        />
       </View>
     </SafeAreaView>
   );

@@ -11,22 +11,22 @@ APP STRUCTURE
             - By Title (Z-A)
             - By Date (ascending)
             - By Date (descending)
-3 EventsScreen
+3 Events
     A List of all active events:
         - EventCard  (thumbnail image, event name, countdown)
     B "Button" to add a new event
-4 AddEventScreen
+4 AddEvent
     A image, name, date, time, location, description, cancel button, save button
-5 EditEventScreen
+5 EditEvent
     A image, name, date, time, location, description, cancel button, save button
-6 ViewEventScreen
+6 ViewEvent
     A image, name, date, time, location, description, countdown, edit button, delete button
 7 ConfirmDeleteCard (cancel button, delete button) - use phone Alert API
-8 ArchivedEventsScreen
+8 ArchivedEvents
     A List of all expired events:
         - "ExpiredEventCard"  (thumbnail image, event name, date, time)
     B Button to go back to EventsScreen
-9 SettingsScreen
+9 Settings
     A General
         - Theme
             - Dark Mode
@@ -35,16 +35,20 @@ APP STRUCTURE
         - Time Format
         - First Day of the Week
         - Update widget in the background
-        - Click on widget to open app
         - Display widget in the status bar
         - Disable Analytics
     B About
-        - Build Version
-        - Send Feedback
-        - Rate and Review App on Google Play
+        - Build Version: 1.0.0
+        - Open an issue on GitHub to report bugs https://github.com/mikeattah/events-countdown-mobile-app/issues
+        - Rate and Review App on Expo Store
         - Privacy Policy
+            - XXX
         - Terms of Service
-        - Open Source Licenses
+            - None
+        - License:
+            - MIT
+        - Author:
+            - Mike Attah https://mikeattah.com
 10 SideMenu - use drawer
     A Add new event - AddOrEditEventScreen
     B View all events - EventsScreen

@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, StyleSheet, Text, View } from "react-native";
+import { SafeAreaView, StyleSheet, View } from "react-native";
 
 import ArchivedEventCard from "../components/atoms/ArchivedEventCard";
 import data from "../assets/data.json";

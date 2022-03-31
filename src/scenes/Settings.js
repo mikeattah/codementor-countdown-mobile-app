@@ -1,11 +1,49 @@
 import React from "react";
-import { SafeAreaView, StyleSheet, Text, View } from "react-native";
+import {
+  SafeAreaView,
+  StyleSheet,
+  TouchableOpacity,
+  Text,
+  View,
+  Linking,
+} from "react-native";
 
 function Settings({ navigation }) {
   return (
     <SafeAreaView>
       <View style={styles.container}>
-        <Text>Settings Screen</Text>
+        <View style={styles.general}>
+          <Text>General</Text>
+        </View>
+        <View style={styles.general}>
+          <Text>About</Text>
+          <Text>Build Version: 1.0.0</Text>
+          <Text>
+            Open an issue on
+            <TouchableOpacity
+              onPress={() =>
+                Linking.openURL(
+                  "https://github.com/mikeattah/events-countdown-mobile-app/issues"
+                )
+              }
+            >
+              <Text style={styles.links}>GitHub</Text>
+            </TouchableOpacity>
+            to report bugs or suggest features:
+          </Text>
+          <Text>
+            Review App on
+            <TouchableOpacity
+              onPress={() =>
+                Linking.openURL(
+                  "https://github.com/mikeattah/events-countdown-mobile-app/issues"
+                )
+              }
+            >
+              <Text>Expo</Text>
+            </TouchableOpacity>
+          </Text>
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -20,6 +58,7 @@ const styles = StyleSheet.create({
     height: "100%",
     width: "100%",
   },
+  links: {},
 });
 
 export default Settings;
