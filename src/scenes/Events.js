@@ -1,7 +1,5 @@
 import React from "react";
-
 import { Button, FlatList, SafeAreaView, StyleSheet, View } from "react-native";
-
 import EventCard from "../components/atoms/EventCard";
 import data from "../assets/data.json";
 
@@ -17,12 +15,13 @@ function Events({ navigation }) {
             renderItem={({ item }) => {
               return (
                 <EventCard
+                  source={item.image}
                   name={item.name}
-                  description={item.description}
                   date={item.date}
+                  time={item.time}
                   location={item.location}
-                  url={item.url}
-                  image={item.image}
+                  description={item.description}
+                  opacity={1}
                   navigation={navigation}
                 />
               );

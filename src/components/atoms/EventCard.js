@@ -51,6 +51,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     padding: 10,
     margin: 10,
+    opacity: props.opacity,
   },
   eventImageContainer: {
     flexDirection: "column",

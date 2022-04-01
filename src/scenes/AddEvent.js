@@ -6,7 +6,6 @@ const saveEvent = () => {};
 
 function AddEvent({ route, navigation }) {
   // const { param1, param2 } = route.params;
-
   const [eventImage, setEventImage] = useState("");
   const [eventName, setEventName] = useState("Enter Event Name");
   const [eventDate, setEventDate] = useState("Enter Event Date");

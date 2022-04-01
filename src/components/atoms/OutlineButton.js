@@ -1,7 +1,7 @@
 import React from "react";
 import { TouchableOpacity, Text, StyleSheet } from "react-native";
 
-function ButtonOne({ ...props }) {
+function OutlineButton({ ...props }) {
   return (
     <TouchableOpacity
       onPress={() => {
@@ -9,7 +9,7 @@ function ButtonOne({ ...props }) {
       }}
       style={styles.button}
     >
-      <Text style={styles.buttonLabel}>{props.title}</Text>
+      <Text style={styles.text}>{props.title}</Text>
     </TouchableOpacity>
   );
 }
@@ -19,17 +19,17 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
     paddingVertical: 6,
     borderRadius: 4,
-    backgroundColor: "oldlace",
+    backgroundColor: "coral",
     marginHorizontal: "1%",
     marginBottom: 6,
     minWidth: "45%",
     textAlign: "center",
   },
-  buttonLabel: {
+  text: {
     fontSize: 15,
     fontWeight: "500",
-    color: "coral",
+    color: "white",
   },
 });
 
-export default ButtonOne;
+export default OutlineButton;

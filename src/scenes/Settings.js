@@ -13,36 +13,50 @@ function Settings({ navigation }) {
     <SafeAreaView>
       <View style={styles.container}>
         <View style={styles.general}>
-          <Text>General</Text>
+          <Text style={styles.title}>General</Text>
+          <TouchableOpacity onPress={() => {}} style={styles.links}>
+            <Text style={styles.textTop}>Theme</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => {}} style={styles.links}>
+            <Text style={styles.textTop}>Date Format</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => {}} style={styles.links}>
+            <Text style={styles.textTop}>First day of the week</Text>
+          </TouchableOpacity>
         </View>
-        <View style={styles.general}>
-          <Text>About</Text>
-          <Text>Build Version: 1.0.0</Text>
-          <Text>
-            Open an issue on
-            <TouchableOpacity
-              onPress={() =>
-                Linking.openURL(
-                  "https://github.com/mikeattah/events-countdown-mobile-app/issues"
-                )
-              }
-            >
-              <Text style={styles.links}>GitHub</Text>
-            </TouchableOpacity>
-            to report bugs or suggest features:
-          </Text>
-          <Text>
-            Review App on
-            <TouchableOpacity
-              onPress={() =>
-                Linking.openURL(
-                  "https://github.com/mikeattah/events-countdown-mobile-app/issues"
-                )
-              }
-            >
-              <Text>Expo</Text>
-            </TouchableOpacity>
-          </Text>
+        <View style={styles.about}>
+          <Text style={styles.title}>About</Text>
+          <TouchableOpacity style={styles.links}>
+            <Text style={styles.textTop}>Build Version</Text>
+            <Text style={styles.textBottom}>1.0.0</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() =>
+              Linking.openURL(
+                "https://github.com/mikeattah/events-countdown-mobile-app/issues"
+              )
+            }
+            style={styles.links}
+          >
+            <Text style={styles.textTop}>Open an issue on GitHub</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() =>
+              Linking.openURL(
+                "https://github.com/mikeattah/events-countdown-mobile-app/issues"
+              )
+            }
+            style={styles.links}
+          >
+            <Text style={styles.textTop}>Review App on Expo</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => Linking.openURL("https://mikeattah.com/")}
+            style={styles.links}
+          >
+            <Text style={styles.textTop}>Author:</Text>
+            <Text style={styles.textBottom}>Mike Attah</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </SafeAreaView>
@@ -58,7 +72,12 @@ const styles = StyleSheet.create({
     height: "100%",
     width: "100%",
   },
+  general: {},
+  about: {},
+  title: {},
   links: {},
+  textTop: {},
+  textBottom: {},
 });
 
 export default Settings;

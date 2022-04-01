@@ -1,10 +1,9 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, View } from "react-native";
-
-import ArchivedEventCard from "../components/atoms/ArchivedEventCard";
+import EventCard from "../components/atoms/EventCard";
 import data from "../assets/data.json";
 
-function ArchivedEvents({ navigation }) {
+function RecycleBin({ navigation }) {
   return (
     <SafeAreaView>
       <View style={styles.container}>
@@ -12,13 +11,14 @@ function ArchivedEvents({ navigation }) {
           data={data}
           renderItem={({ item }) => {
             return (
-              <ArchivedEventCard
+              <EventCard
+                source={item.image}
                 name={item.name}
-                description={item.description}
                 date={item.date}
+                time={item.time}
                 location={item.location}
-                url={item.url}
-                image={item.image}
+                description={item.description}
+                opacity={0.7}
               />
             );
           }}
@@ -37,4 +37,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ArchivedEvents;
+export default RecycleBin;
