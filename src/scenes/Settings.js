@@ -8,7 +8,7 @@ import {
   Linking,
 } from "react-native";
 
-function Settings({ navigation }) {
+function Settings({ route, navigation }) {
   return (
     <SafeAreaView>
       <View style={styles.container}>

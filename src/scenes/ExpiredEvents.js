@@ -3,7 +3,7 @@ import { SafeAreaView, StyleSheet, View } from "react-native";
 import EventCard from "../components/atoms/EventCard";
 import data from "../assets/data.json";
 
-function ExpiredEvents({ navigation }) {
+function ExpiredEvents({ route, navigation }) {
   return (
     <SafeAreaView>
       <View style={styles.container}>

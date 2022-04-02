@@ -11,39 +11,51 @@ import {
 
 const saveEvent = () => {};
 
-function EventDetails({ route, navigation, ...props }) {
+function EventDetails(props) {
+  const {
+    title,
+    source,
+    name,
+    date,
+    location,
+    description,
+    navigation,
+    leftButton,
+    rightButton,
+  } = props;
+
   return (
     <View>
       <View style={styles.details}>
-        <Text>{props.title}</Text>
+        <Text>{title}</Text>
         <View>
-          <Image style={styles.image} source={props.image} />
+          <Image style={styles.image} source={source} />
         </View>
         <View>
           <TextInput
             style={styles.input}
             onChangeText={setEventName}
-            value={props.name}
+            value={name}
           />
           <TextInput
             style={styles.input}
             onChangeText={setEventDate}
-            value={props.date}
+            value={date}
           />
           <TextInput
             style={styles.input}
             onChangeText={setEventTime}
-            value={props.time}
+            value={date}
           />
           <TextInput
             style={styles.input}
             onChangeText={setEventLocation}
-            value={props.location}
+            value={location}
           />
           <TextInput
             style={styles.input}
             onChangeText={setEventDescription}
-            value={props.description}
+            value={description}
             multiline={true}
             textAlignVertical="top"
           />
@@ -51,7 +63,7 @@ function EventDetails({ route, navigation, ...props }) {
       </View>
       <View style={styles.buttons}>
         <Button
-          title={props.leftButton}
+          title={leftButton}
           onPress={() =>
             navigation.navigate("Events", {
               /* params */
@@ -60,7 +72,7 @@ function EventDetails({ route, navigation, ...props }) {
           style={styles.cancel}
         />
         <Button
-          title={props.rightButton}
+          title={rightButton}
           onPress={() => {
             saveEvent();
             navigation.navigate("Events", {

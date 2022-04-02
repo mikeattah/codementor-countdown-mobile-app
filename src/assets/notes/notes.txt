@@ -47,6 +47,15 @@ APP STRUCTURE
     D @mikeattah - https://twitter.com/mikeattahh
 
 
+AppDrawer:
+    - AddEvent
+    - Events
+    - ExpiredEvents
+    - RecycleBin
+    - Settings
+EditEvent
+ViewEvent
+
 <div>UI Designs made by <a href="https://uixlibrary.com/profile/cristian-dragos" title="Cristian Dragos">Cristian Dragos</a> from <a href="https://uixlibrary.com/" title=“UIXLibrary”>uixlibrary.com</a></div>
 
 https://dribbble.com/shots/15539556-Campus-Cards-Elements/attachments/7320418?mode=media

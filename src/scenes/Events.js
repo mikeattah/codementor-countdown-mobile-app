@@ -5,7 +5,7 @@ import data from "../assets/data.json";
 
 const Separator = () => <View style={styles.separator} />;
 
-function Events({ navigation }) {
+function Events({ route, navigation }) {
   return (
     <SafeAreaView>
       <View style={styles.container}>

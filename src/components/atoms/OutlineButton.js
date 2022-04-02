@@ -1,15 +1,17 @@
 import React from "react";
 import { TouchableOpacity, Text, StyleSheet } from "react-native";
 
-function OutlineButton({ ...props }) {
+function OutlineButton(props) {
+  const { text, onPress } = props;
   return (
     <TouchableOpacity
       onPress={() => {
         console.log("Cancel and go to EventsScreen");
+        onPress();
       }}
       style={styles.button}
     >
-      <Text style={styles.text}>{props.title}</Text>
+      <Text style={styles.text}>{text}</Text>
     </TouchableOpacity>
   );
 }

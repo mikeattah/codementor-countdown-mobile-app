@@ -8,7 +8,18 @@ import {
   View,
 } from "react-native";
 
-function EventCard({ navigation, ...props }) {
+function EventCard(props) {
+  const {
+    source,
+    name,
+    date,
+    time,
+    location,
+    description,
+    opacity,
+    navigation,
+  } = props;
+
   return (
     <SafeAreaView>
       <TouchableHighlight
@@ -20,15 +31,15 @@ function EventCard({ navigation, ...props }) {
         <View style={styles.eventCard}>
           <View style={styles.eventImageContainer}>
             <Image
-              source={{ uri: props.image }}
+              source={{ uri: source }}
               style={styles.eventImage}
             ></Image>
           </View>
           <View style={styles.eventDetails}>
-            <Text style={styles.eventName}>{props.name}</Text>
+            <Text style={styles.eventName}>{name}</Text>
             <Text style={styles.eventDate}>Event Date</Text>
             <Text style={styles.eventTime}>Event Time</Text>
-            <Text style={styles.eventLocation}>{props.location}</Text>
+            <Text style={styles.eventLocation}>{location}</Text>
           </View>
           <View style={styles.eventCountdown}>
             <Text style={styles.days}>No. of Days</Text>
@@ -51,7 +62,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     padding: 10,
     margin: 10,
-    opacity: props.opacity,
+    opacity: 1,
   },
   eventImageContainer: {
     flexDirection: "column",

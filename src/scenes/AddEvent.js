@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { SafeAreaView, StyleSheet, View, TouchableOpacity } from "react-native";
-import EventDetails from "./components/organisms/EventDetails.js";
+import EventDetails from "../components/organisms/EventDetails.js";
 
 const saveEvent = () => {};
 
@@ -26,6 +26,7 @@ function AddEvent({ route, navigation }) {
           time={eventTime}
           location={eventLocation}
           description={eventDescription}
+          navigation={navigation}
           leftButton="Cancel"
           rightButton="Save"
         />
