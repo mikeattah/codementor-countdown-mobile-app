@@ -1,31 +1,29 @@
 import React, { useState } from "react";
 import { SafeAreaView, StyleSheet, View, TouchableOpacity } from "react-native";
-import EventDetails from "../components/organisms/EventDetails.js";
+import AddOrEditEventDetails from "../components/organisms/AddOrEditEventDetails.js";
 
 const saveEvent = () => {};
 
 function AddEvent({ route, navigation }) {
   // const { param1, param2 } = route.params;
-  const [eventImage, setEventImage] = useState("");
-  const [eventName, setEventName] = useState("Enter Event Name");
-  const [eventDate, setEventDate] = useState("Enter Event Date");
-  const [eventTime, setEventTime] = useState("Enter Event Time");
-  const [eventLocation, setEventLocation] = useState("Enter Event Location");
-  const [eventDescription, setEventDescription] = useState(
-    "Enter Event Description"
-  );
+  const [source, setSource] = useState("Click to Upload an Image");
+  const [name, setName] = useState("Enter Event Name");
+  const [date, setDate] = useState("Enter Event Date");
+  const [time, setTime] = useState("Enter Event Time");
+  const [location, setLocation] = useState("Enter Event Location");
+  const [description, setDescription] = useState("Enter Event Description");
 
   return (
     <SafeAreaView>
       <View style={styles.container}>
-        <EventDetails
+        <AddOrEditEventDetails
           title="Add Event Details"
-          source={eventImage}
-          name={eventName}
-          date={eventDate}
-          time={eventTime}
-          location={eventLocation}
-          description={eventDescription}
+          source={source}
+          name={name}
+          date={date}
+          time={time}
+          location={location}
+          description={description}
           navigation={navigation}
           leftButton="Cancel"
           rightButton="Save"

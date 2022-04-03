@@ -12,7 +12,7 @@ function Settings({ route, navigation }) {
   return (
     <SafeAreaView>
       <View style={styles.container}>
-        <View style={styles.general}>
+        <View style={styles.section}>
           <Text style={styles.title}>General</Text>
           <TouchableOpacity onPress={() => {}} style={styles.links}>
             <Text style={styles.textTop}>Theme</Text>
@@ -24,7 +24,7 @@ function Settings({ route, navigation }) {
             <Text style={styles.textTop}>First day of the week</Text>
           </TouchableOpacity>
         </View>
-        <View style={styles.about}>
+        <View style={styles.section}>
           <Text style={styles.title}>About</Text>
           <TouchableOpacity style={styles.links}>
             <Text style={styles.textTop}>Build Version</Text>
@@ -72,8 +72,7 @@ const styles = StyleSheet.create({
     height: "100%",
     width: "100%",
   },
-  general: {},
-  about: {},
+  section: {},
   title: {},
   links: {},
   textTop: {},

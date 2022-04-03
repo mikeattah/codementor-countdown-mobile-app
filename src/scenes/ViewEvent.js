@@ -1,18 +1,19 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, Text, View } from "react-native";
+import ViewEventDetails from "../components/organisms/ViewEventDetails";
 
 function ViewEvent({ route, navigation }) {
   return (
     <SafeAreaView>
       <View style={styles.container}>
-        <EventDetails
+        <ViewEventDetails
           title="Event Details"
-          source={eventImage}
-          name={eventName}
-          date={eventDate}
-          time={eventTime}
-          location={eventLocation}
-          description={eventDescription}
+          source={source}
+          name={name}
+          date={date}
+          time={time}
+          location={location}
+          description={description}
           leftButton="Delete"
           rightButton="Edit"
         />

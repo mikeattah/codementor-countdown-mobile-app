@@ -6,7 +6,7 @@ function FillButton(props) {
   return (
     <TouchableOpacity
       onPress={() => {
-        console.log("Cancel and go to EventsScreen");
+        console.log("Save/Delete and go back to Events");
         onPress();
       }}
       style={styles.button}

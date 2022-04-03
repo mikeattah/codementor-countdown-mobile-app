@@ -24,7 +24,7 @@ function AppDrawer() {
   return (
     <Drawer.Navigator
       initialRouteName="Events"
-      drawerContentOptions={{
+      screenOptions={{
         activeTintColor: "#e91e63",
         itemStyle: { marginVertical: 5 },
       }}
@@ -62,6 +62,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
+        initialRouteName="AppDrawer"
         screenOptions={{
           headerStyle: {
             backgroundColor: "#f4511e",
@@ -73,14 +74,7 @@ export default function App() {
         }}
       >
         <Stack.Screen
-          name="AddEvent"
-          component={AppDrawer}
-          options={{
-            header: () => <Header />,
-          }}
-        />
-        <Stack.Screen
-          name="ExpiredEvents"
+          name="AppDrawer"
           component={AppDrawer}
           options={{
             header: () => <Header />,
@@ -92,23 +86,9 @@ export default function App() {
           options={{ title: "Edit Event", headerShown: false }}
         />
         <Stack.Screen
-          name="Events"
-          component={AppDrawer}
-          options={{
-            header: () => <Header />,
-          }}
-        />
-        <Stack.Screen
           name="ViewEvent"
           component={ViewEvent}
           options={{ title: "View Event", headerShown: false }}
-        />
-        <Stack.Screen
-          name="Settings"
-          component={AppDrawer}
-          options={{
-            header: () => <Header />,
-          }}
         />
       </Stack.Navigator>
     </NavigationContainer>

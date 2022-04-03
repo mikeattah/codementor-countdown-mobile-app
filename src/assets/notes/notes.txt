@@ -84,3 +84,5 @@ https://github.com/Dennitz/Timetable
           />
         </Drawer.Navigator>
       </NavigationContainer>
+
+@expo/vector-icons

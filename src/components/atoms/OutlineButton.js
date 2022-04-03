@@ -6,7 +6,7 @@ function OutlineButton(props) {
   return (
     <TouchableOpacity
       onPress={() => {
-        console.log("Cancel and go to EventsScreen");
+        console.log("Cancel and go back to Events");
         onPress();
       }}
       style={styles.button}

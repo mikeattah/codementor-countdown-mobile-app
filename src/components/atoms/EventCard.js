@@ -24,28 +24,25 @@ function EventCard(props) {
     <SafeAreaView>
       <TouchableHighlight
         onPress={() => {
-          console.log("Navigate to ViewEventScreen");
-          navigation.navigate("ViewEventScreen");
+          console.log("Navigate to View Event");
+          navigation.navigate("ViewEvent");
         }}
       >
-        <View style={styles.eventCard}>
-          <View style={styles.eventImageContainer}>
-            <Image
-              source={{ uri: source }}
-              style={styles.eventImage}
-            ></Image>
+        <View style={styles.card}>
+          <View style={styles.image}>
+            <Image source={{ uri: source }}></Image>
           </View>
-          <View style={styles.eventDetails}>
-            <Text style={styles.eventName}>{name}</Text>
-            <Text style={styles.eventDate}>Event Date</Text>
-            <Text style={styles.eventTime}>Event Time</Text>
-            <Text style={styles.eventLocation}>{location}</Text>
+          <View style={styles.details}>
+            <Text style={styles.textOne}>{name}</Text>
+            <Text style={styles.textTwo}>{date}</Text>
+            <Text style={styles.textTwo}>{time}</Text>
+            <Text style={styles.textTwo}>{location}</Text>
           </View>
-          <View style={styles.eventCountdown}>
-            <Text style={styles.days}>No. of Days</Text>
-            <Text style={styles.hours}>No. of Hours</Text>
-            <Text style={styles.mins}>No. of Mins</Text>
-            <Text style={styles.secs}>No. of Secs</Text>
+          <View style={styles.countdown}>
+            <Text style={styles.textThree}>No. of Days</Text>
+            <Text style={styles.textFour}>No. of Hours</Text>
+            <Text style={styles.textFour}>No. of Mins</Text>
+            <Text style={styles.textFour}>No. of Secs</Text>
           </View>
         </View>
       </TouchableHighlight>
@@ -54,7 +51,7 @@ function EventCard(props) {
 }
 
 const styles = StyleSheet.create({
-  eventCard: {
+  card: {
     flex: 1,
     flexDirection: "row",
     height: 100,
@@ -64,26 +61,17 @@ const styles = StyleSheet.create({
     margin: 10,
     opacity: 1,
   },
-  eventImageContainer: {
+  image: {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
   },
-  eventImage: {
-    width: 80,
-    height: 80,
-    borderRadius: 20,
-  },
-  eventDetails: {},
-  eventName: {},
-  eventDate: {},
-  eventTime: {},
-  eventLocation: {},
-  eventCountdown: {},
-  days: {},
-  hours: {},
-  mins: {},
-  secs: {},
+  details: {},
+  textOne: {},
+  textTwo: {},
+  countdown: {},
+  textThree: {},
+  textFour: {},
 });
 
 export default EventCard;

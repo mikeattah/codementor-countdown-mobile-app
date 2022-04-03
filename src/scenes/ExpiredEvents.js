@@ -12,13 +12,14 @@ function ExpiredEvents({ route, navigation }) {
           renderItem={({ item }) => {
             return (
               <EventCard
-                source={item.image}
+                source={item.source}
                 name={item.name}
                 date={item.date}
                 time={item.time}
                 location={item.location}
                 description={item.description}
                 opacity={0.7}
+                onClick={() => {}}
               />
             );
           }}

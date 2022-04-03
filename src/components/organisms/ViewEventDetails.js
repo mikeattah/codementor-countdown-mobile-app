@@ -3,7 +3,6 @@ import {
   Button,
   StyleSheet,
   Text,
-  TextInput,
   View,
   Image,
   TouchableOpacity,
@@ -25,40 +24,28 @@ function EventDetails(props) {
   } = props;
 
   return (
-    <View>
-      <View style={styles.details}>
-        <Text>{title}</Text>
-        <View>
-          <Image style={styles.image} source={source} />
+    <View style={styles.container}>
+      <View style={styles.box}>
+        <Text style={styles.title}>{title}</Text>
+        <View style={styles.image}>
+          <Image source={source} />
         </View>
-        <View>
-          <TextInput
-            style={styles.input}
-            onChangeText={setEventName}
-            value={name}
-          />
-          <TextInput
-            style={styles.input}
-            onChangeText={setEventDate}
-            value={date}
-          />
-          <TextInput
-            style={styles.input}
-            onChangeText={setEventTime}
-            value={date}
-          />
-          <TextInput
-            style={styles.input}
-            onChangeText={setEventLocation}
-            value={location}
-          />
-          <TextInput
-            style={styles.input}
-            onChangeText={setEventDescription}
-            value={description}
-            multiline={true}
-            textAlignVertical="top"
-          />
+        <View style={styles.details}>
+          <TouchableOpacity style={styles.text}>
+            <Text>{name}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.text}>
+            <Text>{date}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.text}>
+            <Text>{time}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.text}>
+            <Text>{location}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.text}>
+            <Text>{description}</Text>
+          </TouchableOpacity>
         </View>
       </View>
       <View style={styles.buttons}>
@@ -95,9 +82,12 @@ const styles = StyleSheet.create({
     height: "100%",
     width: "100%",
   },
+  box: {},
   details: {},
+  title: {},
   image: {},
-  input: {},
+  details: {},
+  text: {},
   buttons: {
     flexDirection: "row",
     flexWrap: "wrap",
