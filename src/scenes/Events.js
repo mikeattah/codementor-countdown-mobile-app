@@ -1,5 +1,12 @@
 import React from "react";
-import { Button, FlatList, SafeAreaView, StyleSheet, View } from "react-native";
+import {
+  TouchableOpacity,
+  FlatList,
+  SafeAreaView,
+  StyleSheet,
+  View,
+  Text,
+} from "react-native";
 import EventCard from "../components/atoms/EventCard";
 import events from "../assets/events.json";
 
@@ -7,7 +14,7 @@ const Separator = () => <View style={styles.separator} />;
 
 function Events({ route, navigation }) {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={{ height: "100%", width: "100%" }}>
       <View style={styles.container}>
         <View style={styles.eventsContainer}>
           <FlatList
@@ -29,17 +36,17 @@ function Events({ route, navigation }) {
             style={styles.list}
           />
         </View>
-        <Separator />
         <View style={styles.buttonContainer}>
-          <Button
-            title="Add Event"
+          <TouchableOpacity
             onPress={() =>
-              navigation.navigate("AddEvent", {
+              navigation.navigate("Add Event", {
                 /* params */
               })
             }
             style={styles.button}
-          />
+          >
+            <Text style={styles.text}>+</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </SafeAreaView>
@@ -48,32 +55,51 @@ function Events({ route, navigation }) {
 
 const styles = StyleSheet.create({
   separator: {
-    marginVertical: 8,
+    marginVertical: 1,
     borderBottomColor: "#737373",
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
   container: {
-    flex: 1,
+    height: "100%",
+    width: "100%",
     marginTop: 5,
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "flex-start",
     backgroundColor: "#fff",
-    padding: 5,
   },
   eventsContainer: {
-    flex: 9,
+    height: "90%",
+    width: "100%",
   },
   list: {
-    flex: 1,
+    height: "100%",
+    width: "100%",
   },
   buttonContainer: {
-    flex: 1,
+    height: "10%",
+    width: "100%",
+    margin: 0,
+    paddingVertical: 0,
+    paddingHorizontal: 15,
     flexDirection: "row",
     justifyContent: "flex-end",
     alignItems: "center",
   },
-  button: {},
+  button: {
+    height: 50,
+    width: 50,
+    borderRadius: 50,
+    justifyContent: "center",
+    alignItems: "center",
+    marginHorizontal: 25,
+    padding: 0,
+    backgroundColor: "orange",
+  },
+  text: {
+    fontSize: 30,
+    fontWeight: "bold",
+  },
 });
 
 export default Events;

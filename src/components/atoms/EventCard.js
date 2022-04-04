@@ -24,7 +24,7 @@ function EventCard(props) {
     <TouchableHighlight
       onPress={() => {
         console.log("Navigate to View Event");
-        navigation.navigate("ViewEvent");
+        navigation.navigate("View Event");
       }}
       style={{ flex: 1 }}
     >
@@ -52,11 +52,10 @@ function EventCard(props) {
 const styles = StyleSheet.create({
   card: {
     height: 100,
-    width: 200,
     flexDirection: "row",
     borderRadius: 15,
-    padding: 10,
-    margin: 10,
+    padding: 5,
+    margin: 5,
     opacity: 1,
   },
   image: {
