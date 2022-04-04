@@ -10,7 +10,7 @@ import {
 
 function Settings({ route, navigation }) {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
         <View style={styles.section}>
           <Text style={styles.title}>General</Text>

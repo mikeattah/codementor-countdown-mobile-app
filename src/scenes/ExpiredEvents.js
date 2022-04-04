@@ -1,11 +1,11 @@
 import React from "react";
-import { SafeAreaView, StyleSheet, View } from "react-native";
+import { SafeAreaView, StyleSheet, View, FlatList } from "react-native";
 import EventCard from "../components/atoms/EventCard";
 import data from "../assets/data.json";
 
 function ExpiredEvents({ route, navigation }) {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
         <FlatList
           data={data}

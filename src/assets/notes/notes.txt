@@ -86,3 +86,5 @@ https://github.com/Dennitz/Timetable
       </NavigationContainer>
 
 @expo/vector-icons
+
+https://via.placeholder.com/80.png

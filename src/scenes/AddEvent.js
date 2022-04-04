@@ -14,16 +14,22 @@ function AddEvent({ route, navigation }) {
   const [description, setDescription] = useState("Enter Event Description");
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
         <AddOrEditEventDetails
           title="Add Event Details"
           source={source}
+          setSource={setSource}
           name={name}
+          setName={setName}
           date={date}
+          setDate={setDate}
           time={time}
+          setTime={setTime}
           location={location}
+          setLocation={setLocation}
           description={description}
+          setDescription={setDescription}
           navigation={navigation}
           leftButton="Cancel"
           rightButton="Save"

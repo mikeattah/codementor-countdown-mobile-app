@@ -14,7 +14,7 @@ function EditEvent({ route, navigation }) {
   const [description, setDescription] = useState("Enter Event Description");
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
         <AddOrEditEventDetails
           title="Edit Event Details"

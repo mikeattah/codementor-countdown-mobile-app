@@ -1,7 +1,6 @@
 import "react-native-gesture-handler";
 import * as React from "react";
 import { StatusBar } from "expo-status-bar";
-import { Button } from "react-native";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -30,7 +29,7 @@ function AppDrawer() {
       }}
     >
       <Drawer.Screen
-        name="AddEvent"
+        name="Add Event"
         component={AddEvent}
         options={{ drawerLabel: "Add Event" }}
       />
@@ -40,12 +39,12 @@ function AppDrawer() {
         options={{ drawerLabel: "Events" }}
       />
       <Drawer.Screen
-        name="ExpiredEvents"
+        name="Expired Events"
         component={ExpiredEvents}
         options={{ drawerLabel: "Expired Events" }}
       />
       <Drawer.Screen
-        name="RecycleBin"
+        name="Recycle Bin"
         component={RecycleBin}
         options={{ drawerLabel: "Recycle Bin" }}
       />
@@ -81,12 +80,12 @@ export default function App() {
           }}
         />
         <Stack.Screen
-          name="EditEvent"
+          name="Edit Event"
           component={EditEvent}
           options={{ title: "Edit Event", headerShown: false }}
         />
         <Stack.Screen
-          name="ViewEvent"
+          name="View Event"
           component={ViewEvent}
           options={{ title: "View Event", headerShown: false }}
         />

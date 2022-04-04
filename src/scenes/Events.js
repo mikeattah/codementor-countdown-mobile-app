@@ -1,17 +1,17 @@
 import React from "react";
 import { Button, FlatList, SafeAreaView, StyleSheet, View } from "react-native";
 import EventCard from "../components/atoms/EventCard";
-import data from "../assets/data.json";
+import events from "../assets/events.json";
 
 const Separator = () => <View style={styles.separator} />;
 
 function Events({ route, navigation }) {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
-        <View style={styles.events}>
+        <View style={styles.eventsContainer}>
           <FlatList
-            data={data}
+            data={events}
             renderItem={({ item }) => {
               return (
                 <EventCard
@@ -26,18 +26,21 @@ function Events({ route, navigation }) {
                 />
               );
             }}
+            style={styles.list}
           />
         </View>
         <Separator />
-        <Button
-          title="Add Event"
-          onPress={() =>
-            navigation.navigate("AddEvent", {
-              /* params */
-            })
-          }
-          style={styles.button}
-        />
+        <View style={styles.buttonContainer}>
+          <Button
+            title="Add Event"
+            onPress={() =>
+              navigation.navigate("AddEvent", {
+                /* params */
+              })
+            }
+            style={styles.button}
+          />
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -51,18 +54,26 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
+    marginTop: 5,
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "flex-start",
     backgroundColor: "#fff",
     padding: 5,
   },
-  events: {},
-  button: {
+  eventsContainer: {
+    flex: 9,
+  },
+  list: {
+    flex: 1,
+  },
+  buttonContainer: {
+    flex: 1,
     flexDirection: "row",
     justifyContent: "flex-end",
     alignItems: "center",
   },
+  button: {},
 });
 
 export default Events;

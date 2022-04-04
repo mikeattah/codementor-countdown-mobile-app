@@ -4,7 +4,7 @@ import ViewEventDetails from "../components/organisms/ViewEventDetails";
 
 function ViewEvent({ route, navigation }) {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
         <ViewEventDetails
           title="Event Details"

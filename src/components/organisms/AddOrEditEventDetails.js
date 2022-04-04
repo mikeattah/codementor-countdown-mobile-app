@@ -15,10 +15,17 @@ function EventDetails(props) {
   const {
     title,
     source,
+    setSource,
     name,
+    setName,
     date,
+    setDate,
+    time,
+    setTime,
     location,
+    setLocation,
     description,
+    setDescription,
     navigation,
     leftButton,
     rightButton,
@@ -29,12 +36,16 @@ function EventDetails(props) {
       <View style={styles.box}>
         <Text style={styles.title}>{title}</Text>
         <View style={styles.image}>
-          <Image source={source} alt={name} />
+          <Image
+            source={source}
+            onClick={() => setSource({ uri: "https://picsum.photos/100/100" })}
+            alt={name}
+          />
         </View>
         <View style={styles.details}>
           <TextInput style={styles.input} onChangeText={setName} value={name} />
           <TextInput style={styles.input} onChangeText={setDate} value={date} />
-          <TextInput style={styles.input} onChangeText={setTime} value={date} />
+          <TextInput style={styles.input} onChangeText={setTime} value={time} />
           <TextInput
             style={styles.input}
             onChangeText={setLocation}
