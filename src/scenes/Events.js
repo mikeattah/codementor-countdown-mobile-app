@@ -22,6 +22,7 @@ function Events({ route, navigation }) {
             renderItem={({ item }) => {
               return (
                 <EventCard
+                  id={item.id}
                   source={item.source}
                   name={item.name}
                   date={item.date}
@@ -94,11 +95,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginHorizontal: 25,
     padding: 0,
-    backgroundColor: "orange",
+    backgroundColor: "coral",
   },
   text: {
     fontSize: 30,
     fontWeight: "bold",
+    color: "oldlace",
   },
 });
 

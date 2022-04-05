@@ -13,7 +13,9 @@ function Settings({ route, navigation }) {
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
         <View style={styles.section}>
-          <Text style={styles.title}>General</Text>
+          <View style={styles.titleContainer}>
+            <Text style={styles.title}>General</Text>
+          </View>
           <TouchableOpacity onPress={() => {}} style={styles.links}>
             <Text style={styles.textTop}>Theme</Text>
           </TouchableOpacity>
@@ -25,9 +27,11 @@ function Settings({ route, navigation }) {
           </TouchableOpacity>
         </View>
         <View style={styles.section}>
-          <Text style={styles.title}>About</Text>
+          <View style={styles.titleContainer}>
+            <Text style={styles.title}>About</Text>
+          </View>
           <TouchableOpacity style={styles.links}>
-            <Text style={styles.textTop}>Build Version</Text>
+            <Text style={styles.textTop}>Build Version:</Text>
             <Text style={styles.textBottom}>1.0.0</Text>
           </TouchableOpacity>
           <TouchableOpacity
@@ -48,7 +52,7 @@ function Settings({ route, navigation }) {
             }
             style={styles.links}
           >
-            <Text style={styles.textTop}>Review App on Expo</Text>
+            <Text style={styles.textTop}>Review App on Amazon Appstore</Text>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => Linking.openURL("https://mikeattah.com/")}
@@ -67,16 +71,41 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
+    flexDirection: "column",
     alignItems: "center",
-    justifyContent: "center",
-    height: "100%",
-    width: "100%",
+    justifyContent: "flex-start",
   },
-  section: {},
-  title: {},
-  links: {},
-  textTop: {},
-  textBottom: {},
+  section: {
+    width: "100%",
+    paddingHorizontal: 15,
+  },
+  titleContainer: {
+    height: 60,
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    marginTop: 20,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomColor: "coral",
+  },
+  title: {
+    fontSize: 21,
+    color: "coral",
+  },
+  links: {
+    height: 60,
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomColor: "coral",
+  },
+  textTop: {
+    fontSize: 18,
+  },
+  textBottom: {
+    fontSize: 13,
+  },
 });
 
 export default Settings;

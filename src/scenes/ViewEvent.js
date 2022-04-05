@@ -2,7 +2,7 @@ import React from "react";
 import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 import ViewEventDetails from "../components/organisms/ViewEventDetails";
 
-function ViewEvent({ route, navigation }) {
+function ViewEvent({ route, navigation, ...props }) {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>

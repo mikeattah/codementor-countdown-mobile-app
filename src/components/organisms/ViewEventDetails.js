@@ -7,10 +7,12 @@ import {
   Image,
   TouchableOpacity,
 } from "react-native";
+import FillButton from "../atoms/FillButton";
+import OutlineButton from "../atoms/OutlineButton";
 
 const saveEvent = () => {};
 
-function EventDetails(props) {
+function ViewEventDetails(props) {
   const {
     title,
     source,
@@ -49,24 +51,22 @@ function EventDetails(props) {
         </View>
       </View>
       <View style={styles.buttons}>
-        <Button
-          title={leftButton}
+        <FillButton
+          text={leftButton}
           onPress={() =>
             navigation.navigate("Events", {
               /* params */
             })
           }
-          style={styles.cancel}
         />
-        <Button
-          title={rightButton}
+        <OutlineButton
+          text={rightButton}
           onPress={() => {
             saveEvent();
             navigation.navigate("Events", {
               /* params */
             });
           }}
-          style={styles.save}
         />
       </View>
     </View>
@@ -92,32 +92,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     flexWrap: "wrap",
   },
-  cancel: {
-    paddingHorizontal: 8,
-    paddingVertical: 6,
-    borderRadius: 4,
-    backgroundColor: "oldlace",
-    marginHorizontal: "1%",
-    marginBottom: 6,
-    minWidth: "45%",
-    textAlign: "center",
-    fontSize: 15,
-    fontWeight: "500",
-    color: "coral",
-  },
-  save: {
-    paddingHorizontal: 8,
-    paddingVertical: 6,
-    borderRadius: 4,
-    backgroundColor: "coral",
-    marginHorizontal: "1%",
-    marginBottom: 6,
-    minWidth: "45%",
-    textAlign: "center",
-    fontSize: 15,
-    fontWeight: "500",
-    color: "white",
-  },
 });
 
-export default EventDetails;
+export default ViewEventDetails;

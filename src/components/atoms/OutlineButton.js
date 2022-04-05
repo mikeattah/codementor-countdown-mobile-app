@@ -18,19 +18,19 @@ function OutlineButton(props) {
 
 const styles = StyleSheet.create({
   button: {
-    paddingHorizontal: 8,
-    paddingVertical: 6,
-    borderRadius: 4,
-    backgroundColor: "coral",
-    marginHorizontal: "1%",
-    marginBottom: 6,
-    minWidth: "45%",
+    width: 150,
+    paddingVertical: 10,
+    borderRadius: 25,
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
     textAlign: "center",
+    backgroundColor: "oldlace",
   },
   text: {
-    fontSize: 15,
-    fontWeight: "500",
-    color: "white",
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "coral",
   },
 });
 

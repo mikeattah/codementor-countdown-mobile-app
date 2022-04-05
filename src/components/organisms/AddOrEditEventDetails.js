@@ -8,10 +8,12 @@ import {
   Image,
   TouchableOpacity,
 } from "react-native";
+import FillButton from "../atoms/FillButton";
+import OutlineButton from "../atoms/OutlineButton";
 
 const saveEvent = () => {};
 
-function EventDetails(props) {
+function AddOrEditEventDetails(props) {
   const {
     title,
     source,
@@ -37,7 +39,7 @@ function EventDetails(props) {
         <Text style={styles.title}>{title}</Text>
         <View style={styles.image}>
           <Image
-            source={source}
+            source={{ uri: source }}
             onClick={() => setSource({ uri: "https://picsum.photos/100/100" })}
             alt={name}
           />
@@ -61,24 +63,22 @@ function EventDetails(props) {
         </View>
       </View>
       <View style={styles.buttons}>
-        <Button
-          title={leftButton}
+        <OutlineButton
+          text={leftButton}
           onPress={() =>
             navigation.navigate("Events", {
               /* params */
             })
           }
-          style={styles.cancel}
         />
-        <Button
-          title={rightButton}
+        <FillButton
+          text={rightButton}
           onPress={() => {
             saveEvent();
             navigation.navigate("Events", {
               /* params */
             });
           }}
-          style={styles.save}
         />
       </View>
     </View>
@@ -88,47 +88,27 @@ function EventDetails(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
     height: "100%",
     width: "100%",
+    paddingHorizontal: 15,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#fff",
   },
-  box: {},
+  box: {
+    width: "100%",
+  },
   title: {},
   image: {},
   details: {},
   input: {},
   buttons: {
+    width: "100%",
     flexDirection: "row",
+    justifyContent: "space-evenly",
+    alignItems: "center",
     flexWrap: "wrap",
-  },
-  cancel: {
-    paddingHorizontal: 8,
-    paddingVertical: 6,
-    borderRadius: 4,
-    backgroundColor: "oldlace",
-    marginHorizontal: "1%",
-    marginBottom: 6,
-    minWidth: "45%",
-    textAlign: "center",
-    fontSize: 15,
-    fontWeight: "500",
-    color: "coral",
-  },
-  save: {
-    paddingHorizontal: 8,
-    paddingVertical: 6,
-    borderRadius: 4,
-    backgroundColor: "coral",
-    marginHorizontal: "1%",
-    marginBottom: 6,
-    minWidth: "45%",
-    textAlign: "center",
-    fontSize: 15,
-    fontWeight: "500",
-    color: "white",
   },
 });
 
-export default EventDetails;
+export default AddOrEditEventDetails;

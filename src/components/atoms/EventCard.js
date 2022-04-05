@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Image,
-  SafeAreaView,
   StyleSheet,
   Text,
   TouchableHighlight,
@@ -10,21 +9,24 @@ import {
 
 function EventCard(props) {
   const {
+    id,
     source,
     name,
     date,
     time,
     location,
     description,
-    opacity,
     navigation,
+    opacity,
   } = props;
 
   return (
     <TouchableHighlight
       onPress={() => {
         console.log("Navigate to View Event");
-        navigation.navigate("View Event");
+        navigation.navigate("View Event", {
+          /* params */
+        });
       }}
       style={{ flex: 1 }}
     >
@@ -51,12 +53,14 @@ function EventCard(props) {
 
 const styles = StyleSheet.create({
   card: {
-    height: 100,
+    height: 125,
     flexDirection: "row",
-    borderRadius: 15,
     padding: 5,
-    margin: 5,
+    margin: 10,
     opacity: 1,
+    borderRadius: 25,
+    borderWidth: 1,
+    borderColor: "coral",
   },
   image: {
     flexDirection: "column",

@@ -23,6 +23,7 @@ function ExpiredEvents({ route, navigation }) {
               />
             );
           }}
+          style={styles.list}
         />
       </View>
     </SafeAreaView>
@@ -32,9 +33,15 @@ function ExpiredEvents({ route, navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    width: "100%",
     backgroundColor: "#fff",
+    flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
+  },
+  list: {
+    flex: 1,
+    width: "100%",
   },
 });
 
