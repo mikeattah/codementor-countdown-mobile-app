@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Button,
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  TouchableOpacity,
-} from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import FillButton from "../atoms/FillButton";
 import OutlineButton from "../atoms/OutlineButton";
 
@@ -63,7 +56,7 @@ function ViewEventDetails(props) {
           text={rightButton}
           onPress={() => {
             saveEvent();
-            navigation.navigate("Events", {
+            navigation.navigate("Edit Events", {
               /* params */
             });
           }}

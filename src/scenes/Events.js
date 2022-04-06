@@ -39,11 +39,12 @@ function Events({ route, navigation }) {
         </View>
         <View style={styles.buttonContainer}>
           <TouchableOpacity
-            onPress={() =>
+            onPress={() => {
+              console.log("Add Event");
               navigation.navigate("Add Event", {
                 /* params */
-              })
-            }
+              });
+            }}
             style={styles.button}
           >
             <Text style={styles.text}>+</Text>
