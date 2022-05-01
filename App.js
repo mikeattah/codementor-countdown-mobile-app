@@ -1,11 +1,9 @@
 import "react-native-gesture-handler";
 import * as React from "react";
 import { StatusBar } from "expo-status-bar";
-
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-
 import AddEvent from "~scenes/AddEvent";
 import EditEvent from "~scenes/EditEvent";
 import Events from "~scenes/Events";
@@ -13,7 +11,6 @@ import ExpiredEvents from "~scenes/ExpiredEvents";
 import RecycleBin from "~scenes/RecycleBin";
 import Settings from "~scenes/Settings";
 import ViewEvent from "~scenes/ViewEvent";
-
 import Header from "~components/organisms/Header";
 
 const Stack = createNativeStackNavigator();

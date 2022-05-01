@@ -1,7 +1,7 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, View, FlatList } from "react-native";
 import EventCard from "../components/atoms/EventCard";
-import expiredEvents from "../assets/expired-events.json";
+import { expiredEvents } from "../assets/data/data.json";
 
 function ExpiredEvents({ route, navigation }) {
   return (

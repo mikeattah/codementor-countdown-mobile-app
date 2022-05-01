@@ -14,7 +14,6 @@ function AddEvent({ route, navigation }) {
   const [endTime, setEndTime] = useState("");
   const [location, setLocation] = useState("");
   const [description, setDescription] = useState("");
-
   const [focus, setFocus] = useState({
     name: false,
     startDate: false,

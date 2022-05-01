@@ -35,27 +35,29 @@ function Settings({ route, navigation }) {
             <Text style={styles.textBottom}>1.0.0</Text>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() =>
+            onPress={() => {
               Linking.openURL(
                 "https://github.com/mikeattah/events-countdown-mobile-app/issues"
-              )
-            }
+              );
+            }}
             style={styles.links}
           >
             <Text style={styles.textTop}>Open an issue on GitHub</Text>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() =>
+            onPress={() => {
               Linking.openURL(
                 "https://github.com/mikeattah/events-countdown-mobile-app/issues"
-              )
-            }
+              );
+            }}
             style={styles.links}
           >
             <Text style={styles.textTop}>Review App on Amazon Appstore</Text>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => Linking.openURL("https://mikeattah.com/")}
+            onPress={() => {
+              Linking.openURL("https://mikeattah.com/");
+            }}
             style={styles.links}
           >
             <Text style={styles.textTop}>Author:</Text>

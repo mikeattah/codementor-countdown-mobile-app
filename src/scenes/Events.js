@@ -8,7 +8,7 @@ import {
   Text,
 } from "react-native";
 import EventCard from "../components/atoms/EventCard";
-import events from "../assets/events.json";
+import { events } from "../assets/data/data.json";
 
 const Separator = () => <View style={styles.separator} />;
 

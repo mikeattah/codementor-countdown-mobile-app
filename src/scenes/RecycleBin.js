@@ -1,7 +1,7 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, View, FlatList } from "react-native";
 import EventCard from "../components/atoms/EventCard";
-import recycleBin from "../assets/recycle-bin.json";
+import { recycleBin } from "../assets/data/data.json";
 
 function RecycleBin({ route, navigation }) {
   return (
