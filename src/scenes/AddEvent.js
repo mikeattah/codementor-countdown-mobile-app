@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { SafeAreaView, StyleSheet } from "react-native";
+import { saveEvent } from "../utils/operations.js";
 import AddOrEditEventDetails from "../components/organisms/AddOrEditEventDetails.js";
-
-const saveEvent = () => {};
 
 function AddEvent({ route, navigation }) {
   // const { param1, param2 } = route.params;
@@ -46,6 +45,8 @@ function AddEvent({ route, navigation }) {
         setDescription={setDescription}
         focus={focus}
         setFocus={setFocus}
+        saveEvent={saveEvent}
+        type="add"
         navigation={navigation}
         leftButton="Cancel"
         rightButton="Save"

@@ -3,20 +3,31 @@ import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import FillButton from "../atoms/FillButton";
 import OutlineButton from "../atoms/OutlineButton";
 
-const saveEvent = () => {};
-
 function ViewEventDetails(props) {
   const {
     title,
     source,
     name,
     date,
+    time,
     location,
     description,
     navigation,
+    deleteEvent,
     leftButton,
     rightButton,
   } = props;
+
+  const handleDeleteEvent = () => {
+    // call Alert to confirm delete
+    // if confirmed, call deleteEvent
+    // if not, do nothing
+    deleteEvent();
+    // after deleting event, navigate to Events
+    navigation.navigate("Events", {
+      /* params */
+    });
+  };
 
   return (
     <View style={styles.container}>
@@ -44,18 +55,10 @@ function ViewEventDetails(props) {
         </View>
       </View>
       <View style={styles.buttons}>
-        <FillButton
-          text={leftButton}
-          onPress={() =>
-            navigation.navigate("Events", {
-              /* params */
-            })
-          }
-        />
+        <FillButton text={leftButton} onPress={() => handleDeleteEvent()} />
         <OutlineButton
           text={rightButton}
           onPress={() => {
-            saveEvent();
             navigation.navigate("Edit Events", {
               /* params */
             });

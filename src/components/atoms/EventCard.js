@@ -6,19 +6,16 @@ import {
   TouchableHighlight,
   View,
 } from "react-native";
+import TimeCard from "./TimeCard";
 
 function EventCard(props) {
-  const {
-    id,
-    source,
-    name,
-    date,
-    time,
-    location,
-    description,
-    navigation,
-    opacity,
-  } = props;
+  const { id, name, date, time, location, _, navigation, opacity } = props;
+  let timeArray = time.split(":");
+  let hours = timeArray[0];
+  let minutes = timeArray[1];
+  let seconds = timeArray[2];
+  let ampm = hours >= 12 ? "PM" : "AM";
+  hours = hours % 12;
 
   return (
     <TouchableHighlight
@@ -30,21 +27,24 @@ function EventCard(props) {
       }}
       style={{ flex: 1 }}
     >
-      <View style={styles.card}>
-        <View style={styles.image}>
-          <Image source={{ uri: source }}></Image>
+      <View style={styles.eventCard}>
+        <View style={styles.imageBox}>
+          <Image
+            style={styles.image}
+            source={{ uri: "https://picsum.photos/200" }}
+          ></Image>
         </View>
         <View style={styles.details}>
-          <Text style={styles.textOne}>{name}</Text>
-          <Text style={styles.textTwo}>{date}</Text>
-          <Text style={styles.textTwo}>{time}</Text>
-          <Text style={styles.textTwo}>{location}</Text>
+          <Text style={styles.eventName}>{name}</Text>
+          <Text style={styles.eventDate}>{date}</Text>
+          <Text style={styles.eventTime}>{time}</Text>
+          <Text style={styles.eventLocation}>{location}</Text>
         </View>
         <View style={styles.countdown}>
-          <Text style={styles.textThree}>No. of Days</Text>
-          <Text style={styles.textFour}>No. of Hours</Text>
-          <Text style={styles.textFour}>No. of Mins</Text>
-          <Text style={styles.textFour}>No. of Secs</Text>
+          <TimeCard time={date.splice(-2)} type="DAYS" />
+          <TimeCard time={hours} type="HOURS" />
+          <TimeCard time={minutes} type="MINUTES" />
+          <TimeCard time={seconds} type="SECONDS" />
         </View>
       </View>
     </TouchableHighlight>
@@ -52,8 +52,8 @@ function EventCard(props) {
 }
 
 const styles = StyleSheet.create({
-  card: {
-    height: 125,
+  eventCard: {
+    height: 100,
     flexDirection: "row",
     padding: 5,
     margin: 10,
@@ -62,17 +62,33 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "coral",
   },
-  image: {
+  imageBox: {
+    height: "100%",
+    width: "20%",
     flexDirection: "column",
-    justifyContent: "center",
+    justifyContent: "flex-start",
     alignItems: "center",
+    borderRadius: 25,
   },
-  details: {},
-  textOne: {},
-  textTwo: {},
-  countdown: {},
-  textThree: {},
-  textFour: {},
+  image: {
+    height: "100%",
+    width: "100%",
+    borderRadius: 25,
+  },
+  details: {
+    height: "100%",
+    width: "40%",
+    paddingLeft: 10,
+  },
+  eventName: {},
+  eventDate: {},
+  eventTime: {},
+  eventLocation: {},
+  countdown: {
+    height: "100%",
+    width: "40%",
+    paddingLeft: 10,
+  },
 });
 
 export default EventCard;

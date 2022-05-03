@@ -34,6 +34,8 @@ function AddOrEditEventDetails(props) {
     setDescription,
     focus,
     setFocus,
+    saveEvent,
+    type,
     navigation,
     leftButton,
     rightButton,
@@ -159,7 +161,7 @@ function AddOrEditEventDetails(props) {
           text={rightButton}
           onPress={() => {
             console.log(rightButton);
-            saveEvent();
+            saveEvent(type);
             navigation.navigate("Events", {
               /* params */
             });

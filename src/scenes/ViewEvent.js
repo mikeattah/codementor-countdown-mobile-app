@@ -1,5 +1,6 @@
 import React from "react";
 import { SafeAreaView, StyleSheet } from "react-native";
+import { deleteEvent } from "../utils/operations";
 import ViewEventDetails from "../components/organisms/ViewEventDetails";
 
 function ViewEvent({ route, navigation, ...props }) {
@@ -13,6 +14,8 @@ function ViewEvent({ route, navigation, ...props }) {
         time={time}
         location={location}
         description={description}
+        navigation={navigation}
+        deleteEvent={deleteEvent}
         leftButton="Delete"
         rightButton="Edit"
       />

@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { SafeAreaView, StyleSheet, View, TouchableOpacity } from "react-native";
 import AddOrEditEventDetails from "../components/organisms/AddOrEditEventDetails.js";
 
-const saveEvent = () => {};
-
 function EditEvent({ route, navigation }) {
   // const { param1, param2 } = route.params;
   const [source, setSource] = useState("Click to Upload an Image");
@@ -19,11 +17,26 @@ function EditEvent({ route, navigation }) {
         <AddOrEditEventDetails
           title="Edit Event Details"
           source={source}
+          setSource={setSource}
           name={name}
-          date={date}
-          time={time}
+          setName={setName}
+          startDate={startDate}
+          setStartDate={setStartDate}
+          endDate={endDate}
+          setEndDate={setEndDate}
+          startTime={startTime}
+          setStartTime={setStartTime}
+          endTime={endTime}
+          setEndTime={setEndTime}
           location={location}
+          setLocation={setLocation}
           description={description}
+          setDescription={setDescription}
+          focus={focus}
+          setFocus={setFocus}
+          saveEvent={saveEvent}
+          type="edit"
+          navigation={navigation}
           leftButton="Cancel"
           rightButton="Save"
         />
