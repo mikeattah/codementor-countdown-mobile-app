@@ -1,9 +1,10 @@
-# Events Countdown Mobile App
+# DevProjects Countdown Mobile App
 
-An event countdown mobile app built for Android and iOS with React Native. It is a code challenge for [Codementor](https://www.codementor.io/).
+A countdown mobile app built for Android and iOS with React Native. It is a code challenge for [Codementor's DevProjects](https://www.codementor.io/projects/mobile/countdown-mobile-app-bjzn08zcon).
 
 ## Tools
 
+- YARN
 - React Native
 - React Navigation
 - Expo
