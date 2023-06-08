@@ -9,10 +9,12 @@ module.exports = function (api) {
           // cwd: "babelrc",
           root: ["./"],
           alias: {
-            /**
-             * Regular expression is used to match all files inside `./src` directory and map each `.src/folder/[..]` to `~folder/[..]` path
-             */
-            "^~(.+)": "./src/\\1",
+            "@assets/*": ["src/assets/*"],
+            "@components/*": ["src/components/*"],
+            "@constants/*": ["src/constants/*"],
+            "@scenes/*": ["src/scenes/*"],
+            "@store/*": ["src/store/*"],
+            "@utils/*": ["src/utils/*"],
           },
           extensions: [
             ".js",
